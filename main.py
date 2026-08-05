@@ -348,7 +348,7 @@ def get_analytics(
 
 
 # Frontend SPA static serving
-FRONTEND_DIR = "os.path.dirname(os.path.abspath(__file__))"
+FRONTEND_DIR = os.path.dirname(os.path.abspath(__file__))
 @app.get("/")
 def serve_index():
     return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
