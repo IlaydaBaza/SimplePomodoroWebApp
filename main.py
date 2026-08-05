@@ -348,8 +348,7 @@ def get_analytics(
 
 
 # Frontend SPA static serving
-FRONTEND_DIR = "C:/Users/Lenovo/.gemini/antigravity/scratch/pomodoro_app/frontend"
-
+FRONTEND_DIR = "os.path.dirname(os.path.abspath(__file__))"
 @app.get("/")
 def serve_index():
     return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
